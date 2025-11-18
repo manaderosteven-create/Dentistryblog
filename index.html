@@ -1,192 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentistry Student's Journey Blog</title>
-    <style>
-        /* Dark Theme Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #1e1e1e;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00bcd4;
-        }
-        nav {
-            background-color: #2c2c2c;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #00bcd4;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        h1, h2 {
-            color: #00bcd4;
-        }
-        .tooth-animation {
-            text-align: center;
-            font-size: 50px;
-            animation: colorChange 3s infinite;
-        }
-        @keyframes colorChange {
-            0% { color: #ffffff; }
-            50% { color: #00bcd4; }
-            100% { color: #ffffff; }
-        }
-        .animated-photo {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-        .comment-form {
-            background-color: #2c2c2c;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .comment-form input, .comment-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-        }
-        .comment-form button {
-            background-color: #00bcd4;
-            color: #121212;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .comment-form button:hover {
-            background-color: #0097a7;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="tooth-animation">🦷</div>
-        <h1>Dentistry Student's Journey</h1>
-        <p>Insights, Advice, and Experiences from a Dental Student's Path</p>
-    </header>
-    
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#journey">My Journey</a>
-        <a href="#advice">Advice</a>
-        <a href="#study-tips">Study Tips</a>
-        <a href="#experiences">Share Experiences</a>
-    </nav>
-    
-    <div class="container">
-        <section id="home" class="section">
-            <h2>Welcome to the Blog</h2>
-            <p>Follow along as I share my experiences as a dentistry student. From the challenges of anatomy classes to clinical rotations, this blog offers tips, tricks, and a community space for fellow students.</p>
-        </section>
-        
-        <section id="journey" class="section">
-            <h2>My Journey as a Dentistry Student</h2>
-            <p>Starting from pre-dental studies to hands-on patient care, my path has been filled with late-night study sessions and rewarding moments. Dentistry combines science, art, and empathy—here's how I've navigated it so far.</p>
-            <p><strong>Key Milestones:</strong> Entering dental school, first extraction, and building patient relationships.</p>
-        </section>
-        
-        <section id="advice" class="section">
-            <h2>General Advice for Dentistry Students</h2>
-            <ul>
-                <li><strong>Time Management:</strong> Balance coursework with clinical practice by prioritizing tasks and using planners.</li>
-                <li><strong>Mental Health:</strong> Dentistry can be stressful—practice self-care and seek support from peers.</li>
-                <li><strong>Networking:</strong> Join dental associations early to build connections for internships and jobs.</li>
-                <li><strong>Continuous Learning:</strong> Stay updated with the latest in dental tech and procedures.</li>
-            </ul>
-        </section>
-        
-        <section id="study-tips" class="section">
-            <h2>Study Tips and Tricks</h2>
-            <p>Mastering complex subjects like oral pathology requires smart strategies. Here are some animated tips to make studying engaging:</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <div>
-                    <img src="https://example.com/animated-study-tip1.gif" alt="Pomodoro Technique Animation" class="animated-photo"> <!-- Replace with a Google-sourced animated GIF, e.g., "pomodoro timer animation" -->
-                    <p><strong>Pomodoro Technique:</strong> Study for 25 minutes, then take a 5-minute break. Repeat to maintain focus.</p>
-                </div>
-                <div>
-                    <img src="https://example.com/animated-study-tip2.gif" alt="Flashcard Animation" class="animated-photo"> <!-- Replace with "flashcard study animation" -->
-                    <p><strong>Use Flashcards:</strong> Create digital flashcards for anatomy terms—review them daily for better retention.</p>
-                </div>
-                <div>
-                    <img src="https://example.com/animated-study-tip3.gif" alt="Group Study Animation" class="animated-photo"> <!-- Replace with "group study tips animation" -->
-                    <p><strong>Group Studies:</strong> Discuss cases with peers to gain new perspectives and clarify doubts.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="experiences" class="section">
-            <h2>Share Your Experiences</h2>
-            <p>Have a story from your dentistry journey? Share it below! Your insights can help others.</p>
-            <div class="comment-form">
-                <form id="commentForm">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <textarea id="comment" placeholder="Share your experience..." rows="5" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-                <div id="commentsDisplay"></div> <!-- Placeholder for displaying comments -->
-            </div>
-            <!-- For real comments, integrate Disqus: Add <div id="disqus_thread"></div> and follow Disqus setup guide -->
-        </section>
+import React, { useState } from "react";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db, storage } from "../firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
+
+const MAX_IMAGES = 3;
+const MAX_BODY_LENGTH = 2000;
+
+const topics = ["anatomy", "pathology", "instruments", "biology", "tips"];
+
+export default function CreatePost({ user }) {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [topic, setTopic] = useState(topics[0]);
+  const [tags, setTags] = useState("");
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleImageChange = (e) => {
+    const files = Array.from(e.target.files).slice(0, MAX_IMAGES);
+    setImages(files);
+  };
+
+  const uploadImages = async () => {
+    const urls = [];
+    for (const img of images) {
+      const imgRef = ref(storage, `posts/${user.uid}/${Date.now()}-${img.name}`);
+      const snapshot = await uploadBytes(imgRef, img);
+      const url = await getDownloadURL(snapshot.ref);
+      urls.push(url);
+    }
+    return urls;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (title.trim() === "" || body.trim() === "") {
+      alert("Title and body are required");
+      return;
+    }
+    if (body.length > MAX_BODY_LENGTH) {
+      alert(`Body exceeds max length of ${MAX_BODY_LENGTH}`);
+      return;
+    }
+    setLoading(true);
+    try {
+      const imageUrls = await uploadImages();
+      const newPost = {
+        authorId: user.uid,
+        authorName: user.displayName,
+        title,
+        body,
+        topic,
+        tags: tags.split(",").map(t => t.trim()).filter(Boolean),
+        images: imageUrls,
+        createdAt: serverTimestamp(),
+        views: 0,
+      };
+      const docRef = await addDoc(collection(db, "posts"), newPost);
+      navigate(`/post/${docRef.id}`);
+    } catch (err) {
+      alert(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="max-w-xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Create a New Post / Tip</h1>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block mb-1 font-semibold">Title *</label>
+          <input 
+            type="text" 
+            value={title} 
+            onChange={e => setTitle(e.target.value)} 
+            className="w-full border rounded p-2" 
+            required 
+          />
+        </div>
+        <div>
+          <label className="block mb-1 font-semibold">Body (max {MAX_BODY_LENGTH} chars) *</label>
+          <textarea
+            value={body}
+            onChange={e => setBody(e.target.value)}
+            maxLength={MAX_BODY_LENGTH}
+            rows="6"
+            className="w-full border rounded p-2"
+            required
+          />
+        </div>
+        <div>
+          <label className="block mb-1 font-semibold">Topic *</label>
+          <select value={topic} onChange={e => setTopic(e.target.value)} className="w-full p-2 border rounded">
+            {topics.map(t => (<option key={t} value={t}>{t.charAt(0).toUpperCase() + t.slice(1)}</option>))}
+          </select>
+        </div>
+        <div>
+          <label className="block mb-1 font-semibold">Tags (comma separated)</label>
+          <input 
+            type="text" 
+            value={tags} 
+            onChange={e => setTags(e.target.value)} 
+            className="w-full border rounded p-2" 
+            placeholder="e.g. study, anatomy, tips" 
+          />
+        </div>
+        <div>
+          <label className="block mb-1 font-semibold">Images (up to {MAX_IMAGES})</label>
+          <input type="file" accept="image/*" multiple onChange={handleImageChange} />
+          {images.length > 0 && <p className="mt-1 text-sm text-gray-600">{images.length} image(s) selected</p>}
+        </div>
+        <button
+          type="submit"
+          disabled={loading}
+          className="px-6 py-3 bg-teal-600 text-white rounded hover:bg-teal-700"
+        >
+          {loading ? "Posting..." : "Post"}
+        </button>
+      </form>
     </div>
-    
-    <footer>
-        <p>&copy; 2023 Dentistry Student's Journey. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        // Simple JavaScript for comment simulation (stores in localStorage for demo)
-        document.getElementById('commentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const comment = document.getElementById('comment').value;
-            const commentsDisplay = document.getElementById('commentsDisplay');
-            const newComment = document.createElement('p');
-            newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
-            commentsDisplay.appendChild(newComment);
-            // Clear form
-            document.getElementById('name').value = '';
-            document.getElementById('comment').value = '';
-        });
-    </script>
-</body>
-</html>
+  );
+}
