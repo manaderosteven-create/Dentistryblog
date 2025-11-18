@@ -1,139 +1,192 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dentistry Knowledge Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentistry Student's Journey Blog</title>
     <style>
+        /* Dark Theme Styles */
         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background: #f0f4ff;
-            color: #333;
-        }header {
-        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-        padding: 40px;
-        text-align: center;
-        color: white;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 40px;
-    }
-
-    header p {
-        font-size: 18px;
-        opacity: 0.9;
-    }
-
-    nav {
-        background: #1e3a8a;
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-    nav a {
-        color: white;
-        font-size: 17px;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    .section {
-        background: white;
-        margin: 25px auto;
-        padding: 25px;
-        width: 90%;
-        max-width: 900px;
-        border-radius: 14px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-        color: #1e3a8a;
-    }
-
-    img {
-        width: 100%;
-        border-radius: 12px;
-        margin-top: 10px;
-    }
-
-    textarea {
-        width: 100%;
-        height: 140px;
-        padding: 12px;
-        font-size: 15px;
-        border-radius: 8px;
-        border: 1px solid #bbb;
-    }
-
-    button {
-        margin-top: 12px;
-        padding: 10px 22px;
-        font-size: 16px;
-        background: #1e3a8a;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .quote-box {
-        background: #e0eaff;
-        padding: 18px;
-        border-left: 5px solid #1e3a8a;
-        font-size: 18px;
-        border-radius: 8px;
-    }
-</style>
-
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00bcd4;
+        }
+        nav {
+            background-color: #2c2c2c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #00bcd4;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h1, h2 {
+            color: #00bcd4;
+        }
+        .tooth-animation {
+            text-align: center;
+            font-size: 50px;
+            animation: colorChange 3s infinite;
+        }
+        @keyframes colorChange {
+            0% { color: #ffffff; }
+            50% { color: #00bcd4; }
+            100% { color: #ffffff; }
+        }
+        .animated-photo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .comment-form {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border: 1px solid #00bcd4;
+            border-radius: 4px;
+        }
+        .comment-form button {
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .comment-form button:hover {
+            background-color: #0097a7;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #888;
+        }
+    </style>
 </head>
-<body><header>
-    <h1>Dentistry Knowledge Hub</h1>
-    <p>Learn. Share. Inspire. Grow as a future dentist.</p>
-</header><nav>
-    <a href="#tips">Study Tips</a>
-    <a href="#motivation">Motivation</a>
-    <a href="#resources">Public Resources</a>
-    <a href="#comments">Comments</a>
-</nav><div class="section" id="tips">
-    <h2>📚 Study Tips for Dentistry Students</h2>
-    <ul>
-        <li>Study with active recall and spaced repetition.</li>
-        <li>Use illustrated textbooks for anatomy memorization.</li>
-        <li>Practice identifying instruments daily.</li>
-        <li>Watch clinical videos to visualize real procedures.</li>
-        <li>Create small daily goals to avoid burnout.</li>
-        <li>Join dental study groups for shared learning.</li>
-    </ul>
-</div><div class="section" id="motivation">
-    <h2>💙 Motivation for Future Dentists</h2>
-    <div class="quote-box">
-        "Every tooth has a story, and every dentist becomes part of that story. Keep studying, keep pushing — your future patients are counting on you."
+<body>
+    <header>
+        <div class="tooth-animation">🦷</div>
+        <h1>Dentistry Student's Journey</h1>
+        <p>Insights, Advice, and Experiences from a Dental Student's Path</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#journey">My Journey</a>
+        <a href="#advice">Advice</a>
+        <a href="#study-tips">Study Tips</a>
+        <a href="#experiences">Share Experiences</a>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Welcome to the Blog</h2>
+            <p>Follow along as I share my experiences as a dentistry student. From the challenges of anatomy classes to clinical rotations, this blog offers tips, tricks, and a community space for fellow students.</p>
+        </section>
+        
+        <section id="journey" class="section">
+            <h2>My Journey as a Dentistry Student</h2>
+            <p>Starting from pre-dental studies to hands-on patient care, my path has been filled with late-night study sessions and rewarding moments. Dentistry combines science, art, and empathy—here's how I've navigated it so far.</p>
+            <p><strong>Key Milestones:</strong> Entering dental school, first extraction, and building patient relationships.</p>
+        </section>
+        
+        <section id="advice" class="section">
+            <h2>General Advice for Dentistry Students</h2>
+            <ul>
+                <li><strong>Time Management:</strong> Balance coursework with clinical practice by prioritizing tasks and using planners.</li>
+                <li><strong>Mental Health:</strong> Dentistry can be stressful—practice self-care and seek support from peers.</li>
+                <li><strong>Networking:</strong> Join dental associations early to build connections for internships and jobs.</li>
+                <li><strong>Continuous Learning:</strong> Stay updated with the latest in dental tech and procedures.</li>
+            </ul>
+        </section>
+        
+        <section id="study-tips" class="section">
+            <h2>Study Tips and Tricks</h2>
+            <p>Mastering complex subjects like oral pathology requires smart strategies. Here are some animated tips to make studying engaging:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <img src="https://example.com/animated-study-tip1.gif" alt="Pomodoro Technique Animation" class="animated-photo"> <!-- Replace with a Google-sourced animated GIF, e.g., "pomodoro timer animation" -->
+                    <p><strong>Pomodoro Technique:</strong> Study for 25 minutes, then take a 5-minute break. Repeat to maintain focus.</p>
+                </div>
+                <div>
+                    <img src="https://example.com/animated-study-tip2.gif" alt="Flashcard Animation" class="animated-photo"> <!-- Replace with "flashcard study animation" -->
+                    <p><strong>Use Flashcards:</strong> Create digital flashcards for anatomy terms—review them daily for better retention.</p>
+                </div>
+                <div>
+                    <img src="https://example.com/animated-study-tip3.gif" alt="Group Study Animation" class="animated-photo"> <!-- Replace with "group study tips animation" -->
+                    <p><strong>Group Studies:</strong> Discuss cases with peers to gain new perspectives and clarify doubts.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experiences" class="section">
+            <h2>Share Your Experiences</h2>
+            <p>Have a story from your dentistry journey? Share it below! Your insights can help others.</p>
+            <div class="comment-form">
+                <form id="commentForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <textarea id="comment" placeholder="Share your experience..." rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="commentsDisplay"></div> <!-- Placeholder for displaying comments -->
+            </div>
+            <!-- For real comments, integrate Disqus: Add <div id="disqus_thread"></div> and follow Disqus setup guide -->
+        </section>
     </div>
-    <br>
-    <div class="quote-box">
-        "Small steps each day lead to big achievements. Dentistry is hard, but so are you." 
-    </div>
-</div><div class="section" id="resources">
-    <h2>🌐 Useful Public Websites</h2>
-    <p>Here are some trusted study websites for dentistry students:</p>
-    <ul>
-        <li><a href="https://www.aae.org" target="_blank">American Association of Endodontists</a></li>
-        <li><a href="https://www.ada.org" target="_blank">American Dental Association</a></li>
-        <li><a href="https://www.ncbi.nlm.nih.gov" target="_blank">NCBI (Research Articles)</a></li>
-        <li><a href="https://www.dentalcare.com" target="_blank">DentalCare.com Free Courses</a></li>
-        <li><a href="https://www.youtube.com/@DentistryOnline" target="_blank">Dentistry Online (YouTube)</a></li>
-    </ul>
-</div><div class="section" id="comments">
-    <h2>💬 Share Your Knowledge</h2>
-    <p>Tell your experience, give tips, or share what you learned.</p><!-- Giscus Comment System Placeholder -->
-<p style="color:gray">Real comments will appear here once repo ID and category ID are added.</p>
-
-</div></body>
+    
+    <footer>
+        <p>&copy; 2023 Dentistry Student's Journey. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for comment simulation (stores in localStorage for demo)
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+            const commentsDisplay = document.getElementById('commentsDisplay');
+            const newComment = document.createElement('p');
+            newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+            commentsDisplay.appendChild(newComment);
+            // Clear form
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+</body>
 </html>
