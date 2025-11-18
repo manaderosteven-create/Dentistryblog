@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentistry Student Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .post {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post h2 {
+            color: #4CAF50;
+        }
+        .post p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-section h3 {
+            color: #4CAF50;
+        }
+        .comment {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dentistry Student Blog</h1>
+    <p>Sharing the journey of becoming a dentist</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#posts">Posts</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="posts">
+    <!-- Example Blog Post 1 -->
+    <div class="post">
+        <h2>My First Year Experience</h2>
+        <p>Starting dentistry school was overwhelming but exciting. I learned anatomy, chemistry, and basic dental techniques. The lectures were intense, but I loved getting hands-on with models in the lab.</p>
+        <div class="comment-section">
+            <h3>Comments</h3>
+            <div id="comments1"></div>
+            <input type="text" id="name1" placeholder="Your Name">
+            <textarea id="comment1" placeholder="Write a comment..."></textarea>
+            <button onclick="addComment(1)">Post Comment</button>
+        </div>
+    </div>
+
+    <!-- Example Blog Post 2 -->
+    <div class="post">
+        <h2>Hands-On Clinical Practice</h2>
+        <p>During my third year, I finally got to interact with real patients under supervision. It was challenging but rewarding. Learning patient communication and clinical procedures really built my confidence.</p>
+        <div class="comment-section">
+            <h3>Comments</h3>
+            <div id="comments2"></div>
+            <input type="text" id="name2" placeholder="Your Name">
+            <textarea id="comment2" placeholder="Write a comment..."></textarea>
+            <button onclick="addComment(2)">Post Comment</button>
+        </div>
+    </div>
+</div>
+
+<section class="container" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:dentistryblog@example.com">dentistryblog@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Dentistry Student Blog | Made with ❤️</p>
+</footer>
+
+<script>
+function addComment(postId) {
+    const nameInput = document.getElementById('name' + postId);
+    const commentInput = document.getElementById('comment' + postId);
+    const commentsDiv = document.getElementById('comments' + postId);
+
+    if(nameInput.value && commentInput.value) {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+        commentElement.innerHTML = '<strong>' + nameInput.value + ':</strong> ' + commentInput.value;
+        commentsDiv.appendChild(commentElement);
+
+        nameInput.value = '';
+        commentInput.value = '';
+    } else {
+        alert('Please enter your name and comment.');
+    }
+}
+</script>
+
+</body>
+</html>
